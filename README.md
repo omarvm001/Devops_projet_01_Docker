@@ -3,6 +3,9 @@
 ## Context
 POZOS, a forward-thinking IT company in France, specializes in software development for high schools. To remain competitive and enhance operational efficiency, the innovation department is spearheading a transformative initiative. Their goal is to overhaul the current infrastructure, making it scalable, easily deployable, and highly automated.
 
+## Build and Test Overview
+In this section, i will create an API container for POZOS using Docker. Here’s a quick guide:
+
 ## Challenge
 The existing student list application, built on PHP and Flask, is hosted on a single server. This setup not only lacks scalability but also hinders high availability, making it difficult to deploy new releases without issues. The organization is experiencing delays and setbacks every time a new update is introduced, leading to frustration and inefficiencies.
 
