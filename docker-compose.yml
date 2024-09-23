@@ -1,0 +1,32 @@
+version: '3.3'
+
+services:
+  # Front-End service configuration (Website)
+  front-end.student_list:
+    image: php:apache  # Use the official PHP + Apache image
+    container_name: front-end.student_list  # Name of the container for easy management
+    depends_on:
+      - back-end.student_list  # Ensure the back-end service starts first
+    ports:
+      - "80:80"  # Map host port 80 to container port 80 (web access)
+    volumes:
+      - ./website/:/var/www/html  # Mount local website directory to container's web server folder
+    environment:
+      - USERNAME=toto  # Environment variable for API username
+      - PASSWORD=python  # Environment variable for API password
+    networks:
+      - student_list.network  # Use the custom Docker network for inter-container communication
+
+  # Back-End service configuration (API)
+  back-end.student_list:
+    image: back-end.student_list.img  # Use the custom-built API image
+    container_name: back-end.student_list  # Name of the container for easy management
+    volumes:
+      - './simple_api/:/data/'  # Mount local API data directory to container's /data directory
+    networks:
+      - student_list.network  # Use the custom Docker network for inter-container communication
+
+# Define the custom network for both front-end and back-end services
+networks:
+  student_list.network:
+

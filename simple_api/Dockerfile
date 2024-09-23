@@ -23,7 +23,7 @@ VOLUME [ "/data" ]
 EXPOSE 5000
 
 # Define the default command to execute when the container starts
-ENTRYPOINT [ "python" ]
+#ENTRYPOINT [ "python" ]
 
 # Default arguments to pass to the command when the container starts
-CMD [ "./student_age.py" ]
+CMD [ "python3", "student_age.py" ]
