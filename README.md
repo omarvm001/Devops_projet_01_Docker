@@ -33,7 +33,7 @@ The **student_list** application consists of two modules:
    - [Test the Student List Application](#test-the-student-list-application)
 2. [Infrastructure as Code](#infrastructure-as-code)
    - [Lancer l'application (Front-end & Back-end) automatiquement avec docker-compose](#lancer-lapplication-front-end--back-end-automatiquement-avec-docker-compose)
-3. [Docker Registry](#docker-registry)
+3. [Docker Registry](#docker--registry)
    - [Créer un Docker Registry & Interface Web](#créer-un-docker-registry--interface-web)
    - [Démarrer les services avec Docker Compose](#démarrer-les-services-avec-docker-compose)
    - [Se connecter au Registry privé](#se-connecter-au-registry-privé)
@@ -111,7 +111,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
    **Output of the Command**
    
       When you run the command, you should see output similar to this:
-      ![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/build_image.png)
+      ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/build_image.png)
    ```bash
       [+] Building 0.9s (10/10) FINISHED
     => [internal] load build definition from Dockerfile                                        0.0s
@@ -150,7 +150,7 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
    **Output of the Command**  
    When you run the command, you should see output similar to this:
-   ![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/network.png)
+   ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/network.png)
    ```bash
    docker network create student_list.network --driver=bridge
    e85ed20d322b3add827787425c4a152419633ae518a8c7ae023105b3b5c196b9
@@ -185,7 +185,7 @@ This network will be used to enable communication between the front-end and back
    
    **Output of the Command**
          When you run the command, you should see output similar to this:
-   ![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/FE_BE.png)
+   ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/FE_BE.png)
    ```bash
    docker run --rm -d --name=back-end.student_list --network=student_list.network -v ./simple_api/:/data/ back-end.student_list.img
    b0c21a17d5679fb06c4a544374e474bdbdbed232ff04d3bbfa4f831615c996a9
@@ -273,7 +273,7 @@ This network will be used to enable communication between the front-end and back
       - `http://back-end.student_list:5000/pozos/api/v1.0/get_student_ages`: This is the URL of the API endpoint being called. It points to the path that retrieves the ages of students from the back-end service running on port 5000.
 
    **Output of the Command**
-      ![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/execut.png)
+      ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/execut.png)
 
  8. **Test student_list application**:
       If you're running the app into a remote server or a virtual machine (e.g provisionned by eazytraining's vagrant file), please find your ip address typing
@@ -283,7 +283,7 @@ This network will be used to enable communication between the front-end and back
       ```
 
     **Output of the Command**
-     ![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/webapp.png)
+     ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/webapp.png)
 
 9. **Clean the workspace**:
       To clean up your Docker environment and remove all containers, images, and networks created during the project, run the following commands:
@@ -302,7 +302,7 @@ This network will be used to enable communication between the front-end and back
          - Finally, it verifies that no containers, networks are left running or present in your workspace.
 
     **Output of the Command**
-     ![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/stop.png)
+     ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/stop.png)
    
 
 
@@ -355,7 +355,7 @@ This network will be used to enable communication between the front-end and back
        ```
 
 **Output of the Command**
-![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/docker-compose.png)
+![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/docker-compose.png)
 
 
 ## Deploy Private Registry
@@ -437,7 +437,7 @@ This network will be used to enable communication between the front-end and back
          - `-d`: This flag stands for "detached mode." It means that the containers will run in the background, allowing you to continue using your terminal               without being tied to the output of the containers. If you omit this flag, the logs from the containers will be displayed in your terminal.
 
      **Output of the Command**
-     ![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/docker-compose.png)
+     ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/docker-compose.png)
 
 3. **Log on Private REGISTY**:
    
@@ -448,7 +448,7 @@ This network will be used to enable communication between the front-end and back
       ```
 
    **Output of the Command**
-   ![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/log_reg.png)
+   ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/log_reg.png)
 
 4. **Push an Image to the Private REGISTRY**:
    
@@ -461,9 +461,9 @@ This network will be used to enable communication between the front-end and back
       ```
 
    **Output of the Command**
-   ![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/push.png)
+   ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/push.png)
 
-   ![project](https://github.com/omarvm001/Project_DevOps_01_Docker/blob/main/result.png)
+   ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/result.png)
 
 
 
