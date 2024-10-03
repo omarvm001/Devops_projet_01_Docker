@@ -356,6 +356,7 @@ This network will be used to enable communication between the front-end and back
 
 **Output of the Command**
 ![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/docker-compose.png)
+![project](https://github.com/omarvm001/Devops_projet_01_Docker/blob/main/click_api.png)
 
 
 ## Deploy Private Registry
